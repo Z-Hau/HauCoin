@@ -50,7 +50,7 @@ UniValue GetNetworkHashPS(int lookup, int height) {
     CBlockIndex *pb = chainActive.Tip();
 
     std::ofstream myfile;
-    myfile.open("/home/zihau_8/hash-rate-v0.csv")
+    myfile.open("/home/zihau_8/hash-rate-v0.csv");
     for(int i = 0; i < chainActive.Height() ; i ++)
     {
         height = i;
