@@ -88,7 +88,6 @@ UniValue GetNetworkHashPS(int lookup, int height) {
         myfile << workDiff.getdouble() / timeDiff << "\n";
         return workDiff.getdouble() / timeDiff;
     }
-    return workDiff.getdouble() / timeDiff;
     myfile.close();
 }
 
