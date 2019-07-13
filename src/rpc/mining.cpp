@@ -86,10 +86,11 @@ UniValue GetNetworkHashPS(int lookup, int height) {
         int64_t timeDiff = maxTime - minTime;
 
         myfile << workDiff.getdouble() / timeDiff << "\n";
-        return workDiff.getdouble() / timeDiff;
+        
     }
-    myfile << "wtf" ;
+    
     myfile.close();
+    return "wtf";
 }
 
 UniValue getnetworkhashps(const JSONRPCRequest& request)
