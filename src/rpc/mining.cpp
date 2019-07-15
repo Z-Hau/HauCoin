@@ -54,8 +54,8 @@ UniValue GetNetworkHashPS(int lookup, int height) {
 
     ofstream myfile;
     myfile.open("/home/zihau_8/hash-rate-v0.csv");
-    myfile << "hello testing" << endl;
-    for(int i = 0; i < chainActive.Height() ; i ++)
+    
+    for(int i = 1; i < chainActive.Height() ; i ++)
     {
         height = i;
         if (height >= 0 && height < chainActive.Height())
@@ -89,12 +89,12 @@ UniValue GetNetworkHashPS(int lookup, int height) {
         arith_uint256 workDiff = pb->nChainWork - pb0->nChainWork;
         int64_t timeDiff = maxTime - minTime;
 
-        myfile << workDiff.getdouble() / timeDiff << "\n";
+        myfile << workDiff.getdouble() / timeDiff << endl;
         
     }
     
     myfile.close();
-    return 1000;
+    return 0;
 }
 
 UniValue getnetworkhashps(const JSONRPCRequest& request)
