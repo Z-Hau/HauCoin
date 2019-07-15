@@ -51,6 +51,7 @@ UniValue GetNetworkHashPS(int lookup, int height) {
 
     std::ofstream myfile;
     myfile.open("/home/zihau_8/hash-rate-v0.csv");
+    myfile << "hello testing" << endl;
     for(int i = 0; i < chainActive.Height() ; i ++)
     {
         height = i;
@@ -90,7 +91,7 @@ UniValue GetNetworkHashPS(int lookup, int height) {
     }
     
     myfile.close();
-    return "wtf";
+    return 1000;
 }
 
 UniValue getnetworkhashps(const JSONRPCRequest& request)
