@@ -47,8 +47,6 @@ unsigned int ParseConfirmTarget(const UniValue& value)
 UniValue GetNetworkHashPS(int lookup, int height) {
     CBlockIndex *pb = chainActive.Tip();
 
-    ofstream myfile;
-
     if (height >= 0 && height < chainActive.Height())
         pb = chainActive[height];
 
