@@ -31,6 +31,9 @@
 
 #include<iostream>
 #include<fstream>
+
+using namespace std;
+
 unsigned int ParseConfirmTarget(const UniValue& value)
 {
     int target = value.get_int();
@@ -49,7 +52,7 @@ unsigned int ParseConfirmTarget(const UniValue& value)
 UniValue GetNetworkHashPS(int lookup, int height) {
     CBlockIndex *pb = chainActive.Tip();
 
-    std::ofstream myfile;
+    ofstream myfile;
     myfile.open("/home/zihau_8/hash-rate-v0.csv");
     myfile << "hello testing" << endl;
     for(int i = 0; i < chainActive.Height() ; i ++)
